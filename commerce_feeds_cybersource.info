@@ -1,0 +1,6 @@
+name = Commerce Feeds Cybersource SAWM
+description = Feeds integration for Cybersource SAWM reports
+core = 7.x
+package = Commerce (contrib)
+dependencies[] = feeds
+dependencies[] = commerce_cybersource_sawm

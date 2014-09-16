@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Install functions for commerce_feeds_cybersource module.
+ */
+
+/*
+ * Implement hook_enable().
+ */
+function commerce_feeds_cybersource_enable() {
+  // Clear the cache to display in Feeds as available plugin.
+  cache_clear_all('plugins:feeds:plugins', 'cache');
+}

@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Implements hook_feeds_plugins().
+ */
+function commerce_feeds_cybersource_feeds_plugins() {
+  $path = drupal_get_path('module', 'commerce_feeds_cybersource') . '/plugins';
+
+  $info = array();
+  $info['FeedsCommerceCybersourceProcessor'] = array(
+    'name' => 'Commerce Cybersource processor',
+    'description' => 'Import and update Cybersource payments',
+    'help' => 'Update existing orders and payments based on Cybersource SAWM reports',
+    'handler' => array(
+      'parent' => 'Feedsprocessor',
+      'class' => 'FeedsCommerceCybersourceProcessor',
+      'file' => 'FeedsCommerceCybersourceProcessor.inc',
+      'path' => $path,
+    ),
+  );
+  return $info;
+}
